@@ -10,7 +10,10 @@ const App = () => {
   const { tg } = useTelegram();
 
   useEffect(() => {
-    tg.ready();
+    if (tg) {
+      tg.ready();
+    }
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
