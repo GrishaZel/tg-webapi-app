@@ -1,7 +1,12 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 const QuizPage = () => {
-    const [isLoading, setIsLoading] = useState(true)
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        (window as any).Tally.loadEmbeds?.()
+    }, [])
+
     return (
         <div className="App">
             {isLoading ? (

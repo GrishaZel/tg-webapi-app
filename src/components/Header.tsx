@@ -16,7 +16,7 @@ const nav = [
 
 const Header = () => {
   return (
-    <div className="flex justify-around py-2 border-b-2 border-rose-600 mb-3">
+    <div className="flex justify-around py-2 border-b-2 border-rose-600 mb-3 fixed w-full z-50">
       {nav.map((i) => {
         return <Link to={i.path} key={i.path}>{i.name}</Link>;
       })}

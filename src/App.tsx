@@ -21,11 +21,13 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-      <Routes>
-        <Route index element={<UserInfoPage />} />
-        <Route path={"orders"} element={<OrdersPage />} />
-        <Route path={"quiz"} element={<QuizPage />} />
-      </Routes>
+        <main className="pt-[50px]">
+            <Routes>
+                <Route index element={<UserInfoPage />} />
+                <Route path={"orders"} element={<OrdersPage />} />
+                <Route path={"quiz"} element={<QuizPage />} />
+            </Routes>
+        </main>
     </div>
   );
 };
