@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import { useTelegram } from "./hooks/useTelegram";
 import OrdersPage from "./pages/OrdersPage";
 import UserInfoPage from "./pages/UserInfoPage";
+import QuizPage from "./pages/QuizPage";
 
 const App = () => {
   const { tg } = useTelegram();
@@ -23,6 +24,7 @@ const App = () => {
       <Routes>
         <Route index element={<UserInfoPage />} />
         <Route path={"orders"} element={<OrdersPage />} />
+        <Route path={"quiz"} element={<QuizPage />} />
       </Routes>
     </div>
   );

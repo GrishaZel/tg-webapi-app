@@ -8,6 +8,9 @@ const nav = [
   {
     name: "Заказы",
     path: "/orders",
+  },{
+    name: "Опрос",
+    path: "/quiz",
   },
 ];
 
@@ -15,7 +18,7 @@ const Header = () => {
   return (
     <div className="flex justify-around py-2 border-b-2 border-rose-600 mb-3">
       {nav.map((i) => {
-        return <Link to={i.path}>{i.name}</Link>;
+        return <Link to={i.path} key={i.path}>{i.name}</Link>;
       })}
     </div>
   );
