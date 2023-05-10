@@ -7,6 +7,8 @@ const QuizPage = () => {
         (window as any).Tally.loadEmbeds?.()
     }, [])
 
+    const iframeSrc = 'https://tally.so/r/mBKELe?transparentBackground=1';
+
     return (
         <div className="App">
             {isLoading ? (
@@ -17,7 +19,7 @@ const QuizPage = () => {
             <iframe
                 title="quiz"
                 className="tally-iframe"
-                data-tally-src="https://tally.so/r/nWJOMN?transparentBackground=1"
+                data-tally-src={iframeSrc}
                 width="100%"
                 height="100%"
                 onLoad={() => setIsLoading(false)}
