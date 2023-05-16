@@ -8,17 +8,22 @@ const nav = [
   {
     name: "Заказы",
     path: "/orders",
-  },{
-    name: "Опрос",
+  },
+  {
+    name: "Голосования",
     path: "/quiz",
   },
 ];
 
 const Header = () => {
   return (
-    <div className="flex justify-around py-2 border-b-2 border-rose-600 mb-3 fixed w-full z-50">
+    <div className="flex justify-around py-2 border-b-2  border-black mb-3 fixed w-full z-50">
       {nav.map((i) => {
-        return <Link to={i.path} key={i.path}>{i.name}</Link>;
+        return (
+          <Link to={i.path} key={i.path}>
+            {i.name}
+          </Link>
+        );
       })}
     </div>
   );
